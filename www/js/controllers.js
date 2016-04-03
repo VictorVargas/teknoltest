@@ -11,6 +11,16 @@ angular.module('starter.controllers', [])
 
   $scope.submit = function() {
     // var link = 'http://192.168.1.76:8100/teknollip/api.php';
+    if ($scope.contact.name == "") {
+      alert("Ponga un nombre para continuar");
+      return false;
+    }else if ($scope.contact.email == "") {
+      alert("Ponga un correo para continuar");
+      return false;
+    }else if ($scope.contact.comment == "") {
+      alert("Ponga un comentario para continuar");
+      return false;
+    }
 
     $http({
       method : 'POST',
