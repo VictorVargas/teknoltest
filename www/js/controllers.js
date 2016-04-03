@@ -14,7 +14,7 @@ angular.module('starter.controllers', [])
 
     $http({
       method : 'POST',
-      url: 'http://192.168.1.76/teknollib/api.php',
+      url: 'http://192.168.1.76/teknollib/api/api.php',
       data:{
         name: $scope.contact.name,
         email: $scope.contact.email,
@@ -24,14 +24,11 @@ angular.module('starter.controllers', [])
       $scope.contact.name = '';
       $scope.contact.email = '';
       $scope.contact.comment = '';
-      
+
       alert("Se guardó correctamente su comentario");
     }).error(function(err){
       alert('data : ' + err);
     });
   }
 
-  // $scope.insert = function() {
-  //   alert($scope.contact.name + " | " + $scope.contact.email + " | " + $scope.contact.comment)
-  // }
 }]);
